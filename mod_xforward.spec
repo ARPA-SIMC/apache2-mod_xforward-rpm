@@ -11,7 +11,7 @@ Group:          System Environment/Daemons
 License:        Apache License, Version 2.0
 URL:            https://github.com/openSUSE/apache2-mod_xforward
 Source0:        https://github.com/openSUSE/apache2-mod_xforward/archive/%{gitcommit}.tar.gz
-Source1:        https://raw.githubusercontent.com/ARPA-SIMC/apache2-mod_forward-rpm/v%{version}-%{releaseno}/PACKAGE-LICENSING
+Source1:        https://raw.githubusercontent.com/ARPA-SIMC/apache2-mod_xforward-rpm/v%{version}-%{releaseno}/PACKAGE-LICENSING
 BuildRequires:  httpd-devel
 Requires:       httpd-mmn = %{_httpd_mmn}
 
