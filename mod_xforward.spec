@@ -1,7 +1,7 @@
 %{!?_httpd_mmn: %{expand: %%global _httpd_mmn %%(cat %{_includedir}/httpd/.mmn || echo 0-0)}}
 %define gitname   apache2-mod_xforward
 %define gitcommit 8c7ab1b91d219d88f7ded3d817a41b86b2d217a7
-%define releaseno 1
+%define releaseno 2
 
 Summary:        Apache module to do internal redirect
 Name:           mod_xforward
@@ -12,6 +12,7 @@ License:        Apache License, Version 2.0
 URL:            https://github.com/openSUSE/apache2-mod_xforward
 Source0:        https://github.com/openSUSE/apache2-mod_xforward/archive/%{gitcommit}.tar.gz
 Source1:        https://raw.githubusercontent.com/ARPA-SIMC/apache2-mod_xforward-rpm/v%{version}-%{releaseno}/PACKAGE-LICENSING
+BuildRequires:  gcc
 BuildRequires:  httpd-devel
 Requires:       httpd-mmn = %{_httpd_mmn}
 
@@ -55,5 +56,7 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Nov 26 2019 Emanuele Di Giacomo <edigiacomo@arpa.emr.it> - 0.6.2
+- Add gcc BuildRequire
 * Mon Apr 04 2016 Emanuele Di Giacomo <edigiacomo@arpa.emr.it> - 0.6-1
 - First release
